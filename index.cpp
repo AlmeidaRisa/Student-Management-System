@@ -45,6 +45,27 @@ void enter()
             cin>>course[i];
 
         }
+        total=ch+total;
+    }
+}
+
+void show(){
+    if(total==0)
+    {
+        cout<<"no student data entered"<<endl;
+    }
+    else{
+        for(int i=0;i<total;i++)
+        {
+            cout<<"student data"<<i+1<<endl;
+            cout<<"roll no"<<roll_no[i]<<endl;
+            cout<<"student name"<<name[i]<<endl;
+            cout<<"student class"<<Class[i]<<endl;
+            cout<<"course of student"<<course[i]<<endl;
+            cout<<"mobile no"<<mobile_no[i]<<endl;
+            cout<<"admission year of student"<<admission_year[i]<<endl;
+
+        }
     }
 }
 
@@ -53,10 +74,14 @@ int main()
     int value;
     while(true){
     cout<<"press 1 to enter data"<<endl;
+    cout<<"press 2 to show student data"<<endl;
     cin>>value;
     switch(value){
         case 1:
         enter();
+        break;
+        case 2:
+        show();
         break;
     }
     }
